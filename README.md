@@ -19,13 +19,12 @@ To install this project, follow these steps:
 
 2. **Required Tools and Software:**
    
- - To install Docker version 24.0.7 on Debian or Ubuntu, you need to follow these steps:
-
- - Set up the Docker apt repository on your system. You can use the instructions from [Docker Docs](^1^) or the convenience script from [GitHub](^5^).
- - Update the apt package index and install the specific version of Docker Engine. You can use the command `sudo apt-get install docker-ce=24.0.7~3-0~debian-$(lsb_release -cs)` for Debian or `sudo apt-get install docker-ce=24.0.7~3- 
- 0~ubuntu-$(lsb_release -cs)` for Ubuntu. You can also check the available versions of Docker Engine with the command `apt-cache madison docker-ce`.
- - Start and enable the Docker service with the commands `sudo systemctl enable docker` and `sudo systemctl start docker`.
- - Optionally, add your user account to the docker group to run Docker commands without sudo. You can use the commands `sudo usermod -aG docker $USER` and `newgrp docker`.
+  # Install Docker 24.0.7
+    - Set up the Docker apt repository on your system. You can use the instructions from [Docker Docs](^1^) or the convenience script from [GitHub](^5^).
+    - Update the apt package index and install the specific version of Docker Engine. You can use the command `sudo apt-get install docker-ce=24.0.7~3-0~debian-$(lsb_release -cs)` for Debian or `sudo apt-get install docker-ce=24.0.7~3- 
+    0~ubuntu-$(lsb_release -cs)` for Ubuntu. You can also check the available versions of Docker Engine with the command `apt-cache madison docker-ce`.
+    - Start and enable the Docker service with the commands `sudo systemctl enable docker` and `sudo systemctl start docker`.
+    - Optionally, add your user account to the docker group to run Docker commands without sudo. You can use the commands `sudo usermod -aG docker $USER` and `newgrp docker`.
 
      # Install Kind
      sudo apt-get install kind
