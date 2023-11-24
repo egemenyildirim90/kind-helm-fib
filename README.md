@@ -28,8 +28,8 @@ To install this project, follow these steps:
 
 - Install kind with the command `go install sigs.k8s.io/kind@v0.12.0`. This will put kind in `$(go env GOPATH)/bin`. You may need to add that directory to your `$PATH` as shown [here](^3^) if you encounter the error `kind: command not found` after installation.
   
-  ## Install kubectl
-  To install kubectl version 1.28.3 on your system, you need to follow these steps:
+## Install kubectl
+To install kubectl version 1.28.3 on your system, you need to follow these steps:
 
 - Determine your operating system and architecture. You can use the command `uname -a` on Linux or `systeminfo` on Windows to get this information.
 - Download the kubectl binary for your system from the [Kubernetes release page](^5^). For example, if you are using Linux x86-64, you can use the command `curl -LO https://dl.k8s.io/release/v1.28.3/bin/linux/amd64/kubectl`. If you are using Windows x86-64, you can use the command `curl.exe -LO https://dl.k8s.io/release/v1.28.3/bin/windows/amd64/kubectl.exe`.
