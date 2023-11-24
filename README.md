@@ -71,6 +71,7 @@ This will put the Helm binary in `bin/helm`.
   # Apply the generated Kubernetes manifests using `kubectl`:
   ```bash
   # Apply Kubernetes manifests
+  cd ~/kind-helm-fib/templates
   kubectl apply -f .
   ```
   # Install Ingress Controller (e.g., Nginx)
