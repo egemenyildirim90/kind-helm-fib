@@ -53,9 +53,13 @@ To install this project, follow these steps:
 ## Usage
 # Run
 ```bash
-kubectl get nodes -o wide 
-kubectl get services -n ingress-nginx > Get the Port 80:***** ```
-Get the Internel IP, you're going to type it into your browser and merge them through the browser. For example: 172.10.2.1:31100
+kubectl get nodes -o wide
+```
+Get the Internal IP, you're going to type it into your browser. 
+```
+kubectl get services -n ingress-nginx > Get the Port 80:*****
+```
+Merge them through the browser. For example: 172.10.2.1:31100
 You will be able to see the app.
 
 ## Contribution
