@@ -28,8 +28,8 @@ To install this project, follow these steps:
      sudo apt-get install kind
 
      # Install kubectl
-      sudo apt-get update
-      sudo apt-get install -y kubectl
+     sudo apt-get update
+     sudo apt-get install -y kubectl
 
      # Install Helm
      sudo snap install helm --classic
