@@ -13,7 +13,7 @@ To install this project, follow these steps:
 1. **For Ubuntu/Debian Distributions:**
    - Clone the project by entering the following command in the terminal:
      ```bash
-     git clone https://github.com/egemenyildirim90/kind-helm-fib/tree/master
+     git clone https://github.com/egemenyildirim90/kind-helm-fib/
      cd kind-helm-fib
      ```
 
