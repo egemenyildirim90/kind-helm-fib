@@ -16,9 +16,7 @@ To install this project, follow these steps:
      git clone https://github.com/egemenyildirim90/kind-helm-fib/
      cd kind-helm-fib
      ```
-
-2. **Required Tools and Software:**
-   
+     
   ## Install Docker 24.0.7
  - Set up the Docker apt repository on your system. You can use the instructions from [Docker Docs](^1^) or the convenience script from [GitHub](^5^).
  - Update the apt package index and install the specific version of Docker Engine. You can use the command `sudo apt-get install docker-ce=24.0.7~3-0~debian-$(lsb_release -cs)` for Debian or `sudo apt-get install docker-ce=24.0.7~3- 
