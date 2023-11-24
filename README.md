@@ -39,8 +39,24 @@ To install this project, follow these steps:
 Client Version: version.Info{Major:"1", Minor:"28", GitVersion:"v1.28.3", GitCommit:"2e7996e3e2712684bc73f0dec0200d64eec7fe40", GitTreeState:"clean", BuildDate:"2023-06-01T12:59:06Z", GoVersion:"go1.17.2", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-## Install Helm
-sudo snap install helm --classic
+## Install Helm 3.13.2
+- Download the Helm binary for your operating system and architecture from the [Helm release page](^1^). For example, if you are using Linux x86-64, you can use the command `curl -LO https://get.helm.sh/helm-v3.13.2-linux-amd64.tar.gz`.
+- Extract the Helm binary from the downloaded archive and move it to a directory in your PATH. For example, you can use the commands `tar -zxvf helm-v3.13.2-linux-amd64.tar.gz` and `sudo mv linux-amd64/helm /usr/local/bin/helm`.
+- Verify that Helm is installed and has the correct version. You can use the command `helm version --client` to check the client version. You should see something like this:
+
+```
+version.BuildInfo{Version:"v3.13.2", GitCommit:"2a2fb3b98829f1e0be6fb18af2f6599e0f4e8243", GitTreeState:"clean", GoVersion:"go1.20.10"}
+```
+
+Alternatively, you can also install Helm from source, if you have a working Go environment. You can use the following commands to clone the Helm repository and build the Helm binary:
+
+```
+git clone https://github.com/helm/helm.git
+cd helm
+make
+```
+
+This will put the Helm binary in `bin/helm`.
 
 3. **Run the Project:**
 - You can use the following command to start the project and calculate Fibonacci numbers, for example:
