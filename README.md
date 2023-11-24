@@ -45,9 +45,11 @@ To install this project, follow these steps:
      ```bash
      # Start the project
      kind create cluster --name myfibapp
+     
      # Create a POSTGRES SECRET (change '12345' for what you want)
      kubectl create secret generic postgres-password --from-literal=POSTGRES_PASSWORD=12345
-     Apply the generated Kubernetes manifests using `kubectl`:
+     
+     # Apply the generated Kubernetes manifests using `kubectl`:
      ```bash
      # Apply Kubernetes manifests
      kubectl apply -f .
