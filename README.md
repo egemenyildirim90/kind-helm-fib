@@ -31,7 +31,6 @@ To install this project, follow these steps:
       sudo apt-get update
       sudo apt-get install -y kubectl
 
-
      # Install Helm
      sudo snap install helm --classic
 
@@ -62,8 +61,9 @@ kubectl get nodes -o wide
 ```
 Get the Internal IP, you're going to type it into your browser. 
 ```
-kubectl get services -n ingress-nginx > Get the Port 80:*****
+kubectl get services -n ingress-nginx > 
 ```
+Get the Port 80:*****
 Merge them through the browser. For example: 172.10.2.1:31100
 You will be able to see the app.
 
