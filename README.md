@@ -58,7 +58,8 @@ make
 
 This will put the Helm binary in `bin/helm`.
 
-3. **Run the Project:**
+## Usage
+# Run
 - You can use the following command to start the project and calculate Fibonacci numbers, for example:
   ```bash
   # Start the project
@@ -76,10 +77,6 @@ This will put the Helm binary in `bin/helm`.
   ```
   helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
   helm install nginx-ingress ingress-nginx/ingress-nginx
-  ```
-
-## Usage
-# Run
 ```bash
 kubectl get nodes -o wide
 ```
