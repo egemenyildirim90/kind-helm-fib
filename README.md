@@ -34,11 +34,6 @@ To install this project, follow these steps:
      # Install Helm
      sudo snap install helm --classic
 
-     # Install Ingress Controller (e.g., Nginx)
-     helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-     helm install nginx-ingress ingress-nginx/ingress-nginx
-     ```
-
 3. **Run the Project:**
    - You can use the following command to start the project and calculate Fibonacci numbers, for example:
      ```bash
@@ -53,6 +48,11 @@ To install this project, follow these steps:
      # Apply Kubernetes manifests
      kubectl apply -f .
      ```
+     # Install Ingress Controller (e.g., Nginx)
+     ```
+     helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+     helm install nginx-ingress ingress-nginx/ingress-nginx
+     ```
 
 ## Usage
 # Run
@@ -61,9 +61,9 @@ kubectl get nodes -o wide
 ```
 Get the Internal IP, you're going to type it into your browser. 
 ```
-kubectl get services -n ingress-nginx
+kubectl get services
 ```
-Get the Port 80:*****
+Get the Port 80:***** from Load Balancer
 Merge them through the browser. For example: 172.10.2.1:31100
 You will be able to see the app.
 
