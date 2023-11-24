@@ -1,6 +1,6 @@
 # fib-calculator-on-kind
 
-Short project description...
+A node.js and Python based apps running on your server!
 
 ## Installation
 
