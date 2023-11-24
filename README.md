@@ -19,42 +19,44 @@ To install this project, follow these steps:
 
 2. **Required Tools and Software:**
    
-  # Install Docker 24.0.7
+  ## Install Docker 24.0.7
  - Set up the Docker apt repository on your system. You can use the instructions from [Docker Docs](^1^) or the convenience script from [GitHub](^5^).
  - Update the apt package index and install the specific version of Docker Engine. You can use the command `sudo apt-get install docker-ce=24.0.7~3-0~debian-$(lsb_release -cs)` for Debian or `sudo apt-get install docker-ce=24.0.7~3- 
  0~ubuntu-$(lsb_release -cs)` for Ubuntu. You can also check the available versions of Docker Engine with the command `apt-cache madison docker-ce`.
  - Start and enable the Docker service with the commands `sudo systemctl enable docker` and `sudo systemctl start docker`.
  - Optionally, add your user account to the docker group to run Docker commands without sudo. You can use the commands `sudo usermod -aG docker $USER` and `newgrp docker`.
 
-     # Install Kind
-     sudo apt-get install kind
+  ## Install Kind
+  To install kind version 0.12.0, you need to follow these steps:
 
-     # Install kubectl
-     sudo apt-get update
-     sudo apt-get install -y kubectl
+- Install kind with the command `go install sigs.k8s.io/kind@v0.12.0`. This will put kind in `$(go env GOPATH)/bin`. You may need to add that directory to your `$PATH` as shown [here](^3^) if you encounter the error `kind: command not found` after installation.
+  
+  ## Install kubectl
+  sudo apt-get update
+  sudo apt-get install -y kubectl
 
-     # Install Helm
-     sudo snap install helm --classic
+  ## Install Helm
+  sudo snap install helm --classic
 
 3. **Run the Project:**
-   - You can use the following command to start the project and calculate Fibonacci numbers, for example:
-     ```bash
-     # Start the project
-     kind create cluster --name myfibapp
-     
-     # Create a POSTGRES SECRET (change '12345' for what you want)
-     kubectl create secret generic postgres-password --from-literal=POSTGRES_PASSWORD=12345
-     
-     # Apply the generated Kubernetes manifests using `kubectl`:
-     ```bash
-     # Apply Kubernetes manifests
-     kubectl apply -f .
-     ```
-     # Install Ingress Controller (e.g., Nginx)
-     ```
-     helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-     helm install nginx-ingress ingress-nginx/ingress-nginx
-     ```
+- You can use the following command to start the project and calculate Fibonacci numbers, for example:
+  ```bash
+  # Start the project
+  kind create cluster --name myfibapp
+  
+  # Create a POSTGRES SECRET (change '12345' for what you want)
+  kubectl create secret generic postgres-password --from-literal=POSTGRES_PASSWORD=12345
+  
+  # Apply the generated Kubernetes manifests using `kubectl`:
+  ```bash
+  # Apply Kubernetes manifests
+  kubectl apply -f .
+  ```
+  # Install Ingress Controller (e.g., Nginx)
+  ```
+  helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+  helm install nginx-ingress ingress-nginx/ingress-nginx
+  ```
 
 ## Usage
 # Run
