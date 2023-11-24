@@ -30,8 +30,16 @@ To install this project, follow these steps:
 - Install kind with the command `go install sigs.k8s.io/kind@v0.12.0`. This will put kind in `$(go env GOPATH)/bin`. You may need to add that directory to your `$PATH` as shown [here](^3^) if you encounter the error `kind: command not found` after installation.
   
   ## Install kubectl
-  sudo apt-get update
-  sudo apt-get install -y kubectl
+  To install kubectl version 1.28.3 on your system, you need to follow these steps:
+
+- Determine your operating system and architecture. You can use the command `uname -a` on Linux or `systeminfo` on Windows to get this information.
+- Download the kubectl binary for your system from the [Kubernetes release page](^5^). For example, if you are using Linux x86-64, you can use the command `curl -LO https://dl.k8s.io/release/v1.28.3/bin/linux/amd64/kubectl`. If you are using Windows x86-64, you can use the command `curl.exe -LO https://dl.k8s.io/release/v1.28.3/bin/windows/amd64/kubectl.exe`.
+- Make the kubectl binary executable and move it to a directory in your PATH. For Linux, you can use the commands `chmod +x ./kubectl` and `sudo mv ./kubectl /usr/local/bin/kubectl`. For Windows, you can use the commands `icacls .\kubectl.exe /grant Everyone:F` and `move .\kubectl.exe %USERPROFILE%\bin\kubectl.exe`.
+- Verify that kubectl is installed and has the correct version. You can use the command `kubectl version --client` to check the client version. You should see something like this:
+
+```
+Client Version: version.Info{Major:"1", Minor:"28", GitVersion:"v1.28.3", GitCommit:"2e7996e3e2712684bc73f0dec0200d64eec7fe40", GitTreeState:"clean", BuildDate:"2023-06-01T12:59:06Z", GoVersion:"go1.17.2", Compiler:"gc", Platform:"linux/amd64"}
+```
 
   ## Install Helm
   sudo snap install helm --classic
