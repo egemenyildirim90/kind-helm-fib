@@ -28,8 +28,7 @@ To install this project, follow these steps:
 
 - Install kind with the command `go install sigs.k8s.io/kind@v0.12.0`. This will put kind in `$(go env GOPATH)/bin`. You may need to add that directory to your `$PATH` as shown [here](^3^) if you encounter the error `kind: command not found` after installation.
   
-## Install kubectl
-To install kubectl version 1.28.3 on your system, you need to follow these steps:
+## Install kubectl Client Version: v1.28.3
 
 - Determine your operating system and architecture. You can use the command `uname -a` on Linux or `systeminfo` on Windows to get this information.
 - Download the kubectl binary for your system from the [Kubernetes release page](^5^). For example, if you are using Linux x86-64, you can use the command `curl -LO https://dl.k8s.io/release/v1.28.3/bin/linux/amd64/kubectl`. If you are using Windows x86-64, you can use the command `curl.exe -LO https://dl.k8s.io/release/v1.28.3/bin/windows/amd64/kubectl.exe`.
@@ -40,8 +39,8 @@ To install kubectl version 1.28.3 on your system, you need to follow these steps
 Client Version: version.Info{Major:"1", Minor:"28", GitVersion:"v1.28.3", GitCommit:"2e7996e3e2712684bc73f0dec0200d64eec7fe40", GitTreeState:"clean", BuildDate:"2023-06-01T12:59:06Z", GoVersion:"go1.17.2", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-  ## Install Helm
-  sudo snap install helm --classic
+## Install Helm
+sudo snap install helm --classic
 
 3. **Run the Project:**
 - You can use the following command to start the project and calculate Fibonacci numbers, for example:
