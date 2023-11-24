@@ -24,8 +24,7 @@ To install this project, follow these steps:
  - Start and enable the Docker service with the commands `sudo systemctl enable docker` and `sudo systemctl start docker`.
  - Optionally, add your user account to the docker group to run Docker commands without sudo. You can use the commands `sudo usermod -aG docker $USER` and `newgrp docker`.
 
-  ## Install Kind
-  To install kind version 0.12.0, you need to follow these steps:
+  ## Install Kind 0.12.0
 
 - Install kind with the command `go install sigs.k8s.io/kind@v0.12.0`. This will put kind in `$(go env GOPATH)/bin`. You may need to add that directory to your `$PATH` as shown [here](^3^) if you encounter the error `kind: command not found` after installation.
   
