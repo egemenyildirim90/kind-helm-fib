@@ -61,7 +61,7 @@ kubectl get nodes -o wide
 ```
 Get the Internal IP, you're going to type it into your browser. 
 ```
-kubectl get services -n ingress-nginx > 
+kubectl get services -n ingress-nginx
 ```
 Get the Port 80:*****
 Merge them through the browser. For example: 172.10.2.1:31100
